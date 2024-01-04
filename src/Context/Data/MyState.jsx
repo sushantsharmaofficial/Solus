@@ -169,20 +169,16 @@ export const MyState = (props) => {
   const getOrderData = async () => {
     setLoading(true);
     try {
-      const q = query(collection(fireDB, "orders"), orderBy("time"));
-      const result = onSnapshot(q, (QuerySnapshot) => {
-        const ordersArray = [];
-        QuerySnapshot.forEach((doc) => {
-          ordersArray.push(doc.data());
-          setLoading(false);
-        });
-
-        const totalCount = QuerySnapshot.size;
-        setOrderCount(totalCount);
-        setOrder(ordersArray);
+      const result = await getDocs(collection(fireDB, "orders"));
+      const ordersArray = [];
+      result.forEach((doc) => {
+        ordersArray.push(doc.data());
         setLoading(false);
       });
-      return () => result;
+      const totalCount = ordersArray.length;
+      setOrder(ordersArray);
+      setOrderCount(totalCount);
+      setLoading(false);
     } catch (error) {
       console.log(error);
       setLoading(false);
