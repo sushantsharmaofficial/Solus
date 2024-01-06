@@ -9,7 +9,7 @@ import { Order } from "./Pages/Order/Order";
 import { Cart } from "./Pages/Cart/Cart";
 import { Dashboard } from "./Pages/Admin/Dashboard/Dashboard";
 import { NoPage } from "./Pages/Admin/NoPage/NoPage";
-import { MyState } from "./Context/Data/myState";
+import { MyState } from "./Context/Data/MyState";
 import { Login } from "./Pages/Registration/Login";
 import { Signup } from "./Pages/Registration/Signup";
 import { ProductInfo } from "./Pages/ProductInfo/ProductInfo";
