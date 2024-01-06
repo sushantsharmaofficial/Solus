@@ -8,10 +8,6 @@ export const Order = () => {
   const context = useContext(MyContext);
   const { mode, order, loading } = context;
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
     <Layout>
       {loading && <Loader />}

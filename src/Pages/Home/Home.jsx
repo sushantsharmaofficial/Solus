@@ -11,10 +11,6 @@ export const Home = () => {
   const dispatch = useDispatch();
   const cartItem = useSelector((state) => state.cart);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
     <Layout>
       <HeroSection />

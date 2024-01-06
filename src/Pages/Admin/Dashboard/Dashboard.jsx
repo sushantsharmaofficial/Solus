@@ -8,10 +8,6 @@ export const Dashboard = () => {
   const context = useContext(MyContext);
   const { mode, productCount, orderCount, userCount } = context;
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
     <Layout>
       <section className="text-gray-600 body-font mt-10 mb-10">
