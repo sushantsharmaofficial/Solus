@@ -23,6 +23,10 @@ export const AllProducts = () => {
     localStorage.setItem("cart", JSON.stringify(cartItem));
   }, [cartItem]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Layout>
       <section className="text-gray-600 body-font">

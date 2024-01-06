@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { Layout } from "../../Components/Layout/Layout";
 import { MyContext } from "../../Context/Data/MyContext";
 import { Loader } from "../../Components/Loader/Loader";
@@ -7,6 +7,10 @@ export const Order = () => {
   const userid = JSON.parse(localStorage.getItem("user")).user.uid;
   const context = useContext(MyContext);
   const { mode, order, loading } = context;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <Layout>

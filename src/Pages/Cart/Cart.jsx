@@ -120,6 +120,10 @@ export const Cart = () => {
 
   /* Payment Method */
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Layout>
       <div
