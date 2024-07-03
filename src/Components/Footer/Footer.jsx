@@ -116,7 +116,7 @@ export const Footer = () => {
           </div>
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
             <img
-              src="https://1.bp.blogspot.com/-D7gCZkjVITA/YKXmY7oaiyI/AAAAAAAAEt0/Tt_C3S_ZvZIcXFHEb7cpOslipQpH_vexwCLcBGAsYHQ/s640/Online%2BPayment%2BGateway.jpg"
+              src="https://www.ecommerce-nation.com/wp-content/uploads/2019/02/razorpay.webp"
               alt=""
             />
           </div>
