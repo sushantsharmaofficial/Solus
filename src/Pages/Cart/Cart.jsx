@@ -221,7 +221,7 @@ export const Cart = () => {
                 className="text-gray-700"
                 style={{ color: mode === "dark" ? "white" : "" }}
               >
-                ${totalAmount}
+                Rs {totalAmount}
               </p>
             </div>
             <div className="flex justify-between">
@@ -235,7 +235,7 @@ export const Cart = () => {
                 className="text-gray-700"
                 style={{ color: mode === "dark" ? "white" : "" }}
               >
-                ${shipping}
+                Rs {shipping}
               </p>
             </div>
             <hr className="my-4" />
@@ -251,7 +251,7 @@ export const Cart = () => {
                   className="mb-1 text-lg font-bold"
                   style={{ color: mode === "dark" ? "white" : "" }}
                 >
-                  ${grandTotal}
+                  RS {grandTotal}
                 </p>
               </div>
             </div>
