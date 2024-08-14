@@ -84,7 +84,7 @@ export const Navbar = () => {
                     </Link>
                   </div>
 
-                  {user?.user?.email === "sushant.ku.sh.70@gmail.com" ? (
+                  {user?.user?.email === "Admin123@gmail.com" ? (
                     <div className="flow-root">
                       <Link
                         to={"/dashboard"}
@@ -203,7 +203,7 @@ export const Navbar = () => {
                   >
                     Order
                   </Link>
-                  {user?.user?.email === "sushant.ku.sh.70@gmail.com" ? (
+                  {user?.user?.email === "Admin123@gmail.com" ? (
                     <Link
                       to={"/dashboard"}
                       className="text-sm font-medium text-gray-700 "
