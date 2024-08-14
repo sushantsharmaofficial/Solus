@@ -94,7 +94,7 @@ export const ProtectedRoutes = ({ children }) => {
 export const ProtectedRouteForAdmin = ({ children }) => {
   const admin = JSON.parse(localStorage.getItem("user"));
 
-  if (admin.user.email === "Admin123@gmail.com") {
+  if (admin.user.email === "admin123@gmail.com") {
     return children;
   } else {
     return <Navigate to={"/login"} />;
