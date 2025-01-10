@@ -56,7 +56,7 @@ export const HeroSection = () => {
         backgroundColor: mode === "dark" ? "#010b19" : "",
         color: mode === "dark" ? "white" : "",
       }}
-      className="relative overflow-hidden min-h-[550px] sm:min-h-[650px] bg-gray-100 flex justify-center items-center"
+      className="relative  overflow-hidden min-h-[550px] sm:min-h-[650px] bg-gray-100 flex justify-center items-center"
     >
       {/* pattern */}
       <div className="h-[700px] w-[700px] bg-[#DB2777] bg-opacity-30 absolute -top-1/2 right-0 rounded-3xl rotate-45"></div>
@@ -65,28 +65,30 @@ export const HeroSection = () => {
         <Slider className=" flex flex-wrap mx-5 sm:mx-2" {...settings}>
           {ImageList.map((item, index) => {
             return (
-              <div key={index} className=" ">
-                {/* image section */}
-                <div className=" flex relative z-10">
-                  <img
-                    className="w-[300px] h-[300px] sm:h-[450px] sm:w-[450px] object-contain mx-auto"
-                    src={item.img}
-                    alt="image!"
-                  />
-                </div>
-                {/* text content section */}
-                <div className="w-full  flex flex-col justify-center gap-4 pt-12 sm:pt-0 text-center   relative z-10">
-                  <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-5">
-                    {item.title}
-                  </h1>
-                  <p className="text-sm mb-5">{item.description}</p>
-                  <Link to="/allproducts">
-                    <div>
-                      <button className="bg-[#DB2777] hover:scale-105 duration-200 text-white py-2 px-4 mb-5 rounded-full">
-                        Order Now
-                      </button>
-                    </div>
-                  </Link>
+              <div key={index} className="">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+                  {/* text content section */}
+                  <div className="w-full sm:w-1/2 flex flex-col justify-center gap-4 pt-12 sm:pt-0 text-center sm:text-left relative z-10">
+                    <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-5">
+                      {item.title}
+                    </h1>
+                    <p className="text-sm mb-5">{item.description}</p>
+                    <Link to="/allproducts">
+                      <div>
+                        <button className="bg-[#DB2777] hover:scale-105 duration-200 text-white py-2 px-4 mb-5 rounded-full">
+                          Order Now
+                        </button>
+                      </div>
+                    </Link>
+                  </div>
+                  {/* image section */}
+                  <div className="relative z-10">
+                    <img
+                      className="w-[300px] h-[300px] md:h-[550px] md:w-[550px] object-contain"
+                      src={item.img}
+                      alt="image!"
+                    />
+                  </div>
                 </div>
               </div>
             );
